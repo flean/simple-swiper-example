@@ -1,0 +1,29 @@
+{
+	"private":{
+		"CDN":false,
+		"ngrok":"test.ngrok.io",
+		"mailchimp": {
+			"api_key":"",
+			"listId":""
+		}
+	},
+	"public": {
+		"packages": {
+			"dynamic-import": {
+				"useLocationOrigin": true
+			}
+		},
+		"domainBare":"test.meteorapp.com",
+		"app": {
+			"name":"test"
+		},
+		"legalName":"test LLC",
+		"supportEmail":"support@test.com",
+		"infoEmail":"info@test.com",
+		"analyticsSettings": {
+			"trackingId": "UA-XXXXXXXX-X"
+		},
+		"version":"0.1",
+		"build":"1"
+	}
+}

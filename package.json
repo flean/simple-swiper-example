@@ -2,17 +2,23 @@
   "name": "simple-swiper-example",
   "private": true,
   "scripts": {
-    "start": "meteor run",
+    "start": "TAILWIND_MODE=watch meteor -p 4200  --settings settings.json --exclude-archs web.browser.legacy,web.cordova",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
     "@babel/runtime": "^7.14.8",
+    "autoprefixer": "^10.3.6",
     "meteor-node-stubs": "^1.1.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "swiper": "^7.0.6"
+    "simpl-schema": "^1.12.0",
+    "styled-components": "^5.3.1",
+    "swiper": "^6.8.4",
+    "tailwindcss": "^2.2.16"
   },
   "meteor": {
     "mainModule": {
@@ -20,5 +26,16 @@
       "server": "server/main.js"
     },
     "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "npdev-react-loadable-babel": "^1.1.0",
+    "postcss": "^8.3.6",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-load-config": "^3.1.0"
+  },
+  "babel": {
+    "plugins": [
+      "npdev-react-loadable-babel"
+    ]
   }
 }
